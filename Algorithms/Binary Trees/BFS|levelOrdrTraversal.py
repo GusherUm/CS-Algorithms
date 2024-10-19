@@ -7,7 +7,6 @@ class TreeNode:
     self.right = right
 
   def bfs(root):
-    
     res, q = [], deque([root]) if root else None
 
     while q:
