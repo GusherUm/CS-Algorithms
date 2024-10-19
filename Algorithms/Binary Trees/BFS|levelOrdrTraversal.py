@@ -8,7 +8,7 @@ class TreeNode:
 
   def bfs(root):
     
-    res, q = [], deque([root])
+    res, q = [], deque([root]) if root else None
 
     while q:
       n, temp = len(q), []
