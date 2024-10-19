@@ -1,3 +1,5 @@
+# These traversals basically can be attributed to Depth-First-Search
+
 class TreeNode:
     def __init__(self, val, left = None, right = None):
         self.val = val
