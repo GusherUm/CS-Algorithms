@@ -11,18 +11,17 @@ def quickSort(nums):
         up += 1
 
         while up <= right:
-
+            
             if nums[up] <= key:
                 down += 1
 
                 if up > down:
                     # swap
                     nums[up], nums[down] = nums[down], nums[up]
-                    
-                up += 1
-            else:
-                up += 1
 
+            up += 1
+
+        # At down, pivot element is there. So, 'down - 1' and 'down + 1'
         func(left, down - 1)
         func(down + 1, right)
 
