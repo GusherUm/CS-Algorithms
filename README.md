@@ -1,1 +1,1 @@
-# Technical-Interviews
+# CS - Algorithms
