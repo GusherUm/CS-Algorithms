@@ -6,42 +6,44 @@ class TreeNode:
         self.left = left
         self.right = right
 
-    def preorder(self, root):
-
+class Problem:
+    # preorder -> start from root; go left; go right
+    def preorder(self, root):     # Classical DFS.(That is first traverse on left branch and then the right branch)
         if root:
-            print(root.val)
+            print(root.val, end = '')
             self.preorder(root.left)
             self.preorder(root.right)
 
-        return
-    
+    # inorder -> go left; go to parent; go to right
+    # down up down up down up down up down .... down
     def inorder(self, root):
-
         if root:
             self.inorder(root.left)
-            print(root.val)
+            print(root.val, end = '')
             self.inorder(root.right)
 
-        return
-    
+    # postorder -> go left; go right jumping around the parent; go to parent
     def postorder(self, root):
-
         if root:
             self.postorder(root.left)
             self.postorder(root.right)
-            print(root.val)
+            print(root.val, end = '')
 
-        return
-    
-x = TreeNode(1)
-x.left = TreeNode(2)
-x.right = TreeNode(3)
-x.left.right = TreeNode(4)
+root = TreeNode(1)
+root.left = TreeNode(2)
+root.right = TreeNode(3)
+root.left.left = TreeNode(4)
+root.left.right = TreeNode(5)
+root.right.left = TreeNode(6)
+root.right.right = TreeNode(7)
+root.right.left.left = TreeNode(8)
+root.right.left.right = TreeNode(9)
 
-# Preorder: 1, 2, 4, 3
-# inorder: 2, 4, 1, 3
-# Postorder: 4, 2, 3, 1
-
-x.preorder(x)
-x.inorder(x)
-x.postorder(x)
+obj = Problem()
+obj.preorder(root)
+print()
+print("$$$$$$$$$$$$$$$$$$$$$$$$")
+obj.inorder(root)
+print()
+print("$$$$$$$$$$$$$$$$$$$$$$$$")
+obj.postorder(root)
