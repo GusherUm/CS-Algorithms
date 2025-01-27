@@ -1,6 +1,6 @@
 # Breadth-First-Traversal of Graph - Directed or Undirected graph??
 
-import collections
+from collections import deque
 
 def bfs(graph, root):
 
@@ -17,5 +17,5 @@ def bfs(graph, root):
                 visited.add(neighbour)
                 queue.append(neighbour)
 
-graph = {0: [1, 2], 1: [2, 3], 2: [0, 1, 3], 3: [1, 2]}
+graph = {0: [1, 2], 1: [0, 2, 3], 2: [0, 1, 3], 3: [1, 2]}
 print(bfs(graph, 0))
