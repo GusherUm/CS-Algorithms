@@ -1,4 +1,4 @@
-# Breadth-First-Traversal of Graph
+# Breadth-First-Traversal of Graph - Undirected graph
 
 import collections
 
